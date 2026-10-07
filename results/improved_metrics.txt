@@ -1,0 +1,9 @@
+Emotion Recognition from Speech
+Model: Conv1D (Improved)
+
+Accuracy: 0.6840
+Precision: 0.7177
+Recall: 0.6840
+F1-Score: 0.6818
+Validation Accuracy: 0.6840
+Validation Loss: 1.0455

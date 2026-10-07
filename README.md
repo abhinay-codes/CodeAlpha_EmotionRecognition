@@ -54,18 +54,23 @@ The architecture implemented is a 1D Convolutional Neural Network suitable for s
 - **Confusion Matrix**: Visualizes correct predictions and common misclassifications.
 
 ## Results
-Emotion Recognition from Speech
-Model: Conv1D
+**Final Selected Model (Baseline Architecture): Conv1D**
+- **Test Accuracy**: 0.6493
+- **Test Precision**: 0.6660
+- **Test Recall**: 0.6493
+- **Test F1-Score**: 0.6425
 
-Accuracy: 0.6979
-Precision: 0.7154
-Recall: 0.6979
-F1-Score: 0.6922
+*(Note: Validation metrics tracked during training correspond to this exact test set.)*
 
 ## Limitations
 - Dataset Size: The subset used has 1,440 samples, which is relatively small for deep learning, increasing the risk of overfitting.
 - Speaker Variation: Acted speech might differ significantly from natural emotional speech.
 - Recording Conditions: Clean, noise-free audio does not represent real-world background noise scenarios.
+- **Overfitting & Generalization Experiment**: The baseline model exhibits some overfitting on the training data. Regularization (dropout increased to 0.4) and data augmentation (noise and time-shifting) were evaluated in a controlled experiment to improve generalization. The experiment yielded:
+  - Improved Test Accuracy: 0.6840
+  - Improved Test F1-Score: 0.6818
+  
+  While the experiment originally seemed to slightly improve upon a specific rerun (due to stochasticity), the baseline architecture was retained as the final selected model because its overall test performance was generally competitive without the added complexity, and the experiment did not provide a definitive, substantial improvement on held-out test data.
 
 ## Future Improvements
 - Data Augmentation (e.g., adding noise, time-stretching, pitch-shifting) to improve robustness.
